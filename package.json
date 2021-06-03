@@ -1,0 +1,27 @@
+{
+  "name": "yt-tutorial-001-login",
+  "version": "1.0.0",
+  "description": " this is a YouTube demo on creating a login page",
+  "main": "index.js",
+  "scripts": {
+    "devStart": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lee2smooth03/YT-Tutorial-001-Login.git"
+  },
+  "keywords": [
+    "login",
+    "ejs"
+  ],
+  "author": "ALR4",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lee2smooth03/YT-Tutorial-001-Login/issues"
+  },
+  "homepage": "https://github.com/lee2smooth03/YT-Tutorial-001-Login#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1"
+  }
+}
