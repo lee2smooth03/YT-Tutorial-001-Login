@@ -7,7 +7,7 @@ const app = express();
 
 app.get("/", (req, res) => {    //homepage route that logging in gets
     //@04:20 this route sends a page that we create (index.ejs)
-    res.render('index.ejs')
+    res.render('index-01.ejs');
 
 });
 

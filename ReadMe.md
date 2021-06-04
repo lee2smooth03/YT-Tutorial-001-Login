@@ -96,6 +96,11 @@ __*my stretch goals may be executed in separate projects*__
 - server-02.js renders an .ejs file that does not yet exist
 - the eventual .ejs file resides in a folder called "views"
     + CLI | mkdir views
-    + CLI | touch views/index.ejs
+    + CLI | touch views/index.ejs  
+
+#### @04:45
+- save the /h1/ text in the file, then refresh the webpage
+- to use .ejs syntax, the server needs to be explicitely told
+    + @04:50 go to the "server-03.js" file  
 
 https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
