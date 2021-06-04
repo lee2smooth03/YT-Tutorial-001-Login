@@ -4,7 +4,7 @@
   "description": " this is a YouTube demo on creating a login page",
   "main": "index.js",
   "scripts": {
-    "devStart": "nodemon server.js"
+    "devStart": "nodemon server-01.js"
   },
   "repository": {
     "type": "git",

@@ -4,12 +4,12 @@ Login pages help legitimize sites that act as business conduits. Separating a si
 
 __*come join our community: log in...*__
 
-### Technologies ###
+### Technologies
 In this demonstration //the teacher// uses the following:
-- a .ejs file is a reusable components with variables
+- an .ejs file is a reusable file component with variables
 - passport (https://www.passportjs.org/) is authentication middleware
 
-### Goals ###
+### Goals
 1. simply complete the tutorial as demonstrated above
 2. (stretch) then use CSS to imporove the working result
 3. (stretch) create a login page that determines route based on user roles:
@@ -21,8 +21,8 @@ In this demonstration //the teacher// uses the following:
 
 __*my stretch goals may be executed in separate projects*__
 
-## Boilerplate Template for a Login System ##
-### Project Overview ###
+## Boilerplate Template for a Login System
+### Project Overview
 - three pages:
     1. registration
         * create name
@@ -52,37 +52,50 @@ __*my stretch goals may be executed in separate projects*__
         * links user to the registration page
     2. login
         * links user to the login page
-### Project Set-up (by Time) ###
-*@ 01:30*
+### Project Set-up (by Time)
+#### @01:30
 - initialize the project (with default values)
 - using npm to store all of the dependencies in .json
     + CLI | npm init  
 
-*@ 01:55*
+#### @01:55
 - installing the first two packages needed for this project
     + npm i express ejs
         * express is the application server
         * ejs is the templating language for views  
 
-*@ 02:15*
+#### @02:15
 - installing development packages (used in development only)
     + npm i --save-dev nodemon dotenv
         * nodemon allows automatic restarts to the server
         * dotenv allow us to use|save environment variables  
 
-*@ 02:30*
+#### @02:30
 - creates .env and .gitignore
     + CLI | touch .env .gitignore
         * environment variables go in the .env
         * the ignore file names node modules, the .env, and any other files that contain sensitive information  
 
-*@ 02:55*
+#### @02:55
 - configure the package.json to start server inside "scripts"
     + within the "scripts" property, add the following... 
     ```
     "scripts" : { "devStart" : "nodemon server.js" }
     ```
-- create server.js
+- create server.js and run it using npm
     + CLI | touch server.js
+    + CLI | npm run devStart    //check json to see devStart  
+    (every saved change restarts the server and rerun code)  
+
+#### @03:35
+- setting up the basic express application(s)
+    + @03:50 go to the "server-01.js" file
+    + @04:00 go to the "server-02.js" file  
+
+#### @04:30
+- server-02.js renders an .ejs file that does not yet exist
+- the eventual .ejs file resides in a folder called "views"
+    + CLI | mkdir views
+    + CLI | touch views/index.ejs
 
 https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
