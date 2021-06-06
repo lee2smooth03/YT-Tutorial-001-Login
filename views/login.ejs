@@ -2,6 +2,12 @@
 <!--ccp registration for login page-->
 <h1>Login</h1>
 
+<!--@25:45-->
+<!--we need to be able to display any error messages-->
+<!--use conditional ejs statment-->
+<% if (messages.error) { %>
+    <%= messages.error %>
+<% } %>
 <!--form has all the different inputs-->
 <form action="/login" method="POST">
     <!--action sends info to a route-->

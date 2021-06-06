@@ -9,6 +9,8 @@ In this demonstration //the teacher// uses the following:
 - an .ejs file is a reusable file component with variables
 - bcrypt allows developers to hash passwords, then compare
 - passport (https://www.passportjs.org/) is authentication middleware
+- express-sessions to validate a user across different pages
+- express-flash displays msg (in passport) for wrong info
 
 ### Goals
 1. simply complete the tutorial as demonstrated above
@@ -130,13 +132,23 @@ __*my stretch goals may be executed in separate projects*__
     + CLI | npm i bcrypt
     + @11:15 go to the "server-05.js" file
 
-## @14:25
+#### @14:25
 - the registration code works, but in a limited condition:
 - everytime the server restarts, users[] is reset to empty
 - login functionality will work by matching users' u/n & p/w
 
 - persist users across different requests is really involved
 - passport.js is imported to assist in authentication
-    + CLI | npm i passport passport-local
+    + CLI | npm i passport passport-local (for u/n and p/w)
+
+- the local version allows the use of u/n and p/w for login
+- passport has several ways to login (Google, Facebook, etc)
+- to store and persist user across different pages: sessions
+    + CLI | npm i express-sessions
+    + CLI | npm i express-flash
+
+#### @16:00
+- create a separate file to keep the server file manageable
+    + CLI | touch passport-config.js
 
 https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
