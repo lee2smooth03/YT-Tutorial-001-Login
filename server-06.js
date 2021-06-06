@@ -18,7 +18,7 @@ const passport = require('passport');
 
 //23:00
 const flash = require('express-flash');
-const flash = require('express-session');
+const session = require('express-session');
 
 //16:25
 //require the function that initializes passport from external

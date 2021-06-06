@@ -14,14 +14,14 @@ const bcrypt = require('bcrypt');
 
 //26:50
 //need to add async in front of finitialize function
-async function initialize(passport, getUserByEmail) {
+function initialize (passport, getUserByEmail) {
     //initialize our passport...which will be passed to this f(x)
     //can do all of our configuration of passport inside this file
 
     //18:00
     //define a function that passport.use can use to authenticate
     //this functinon will act as the second variable passed
-    const authenticateUser = (email, password, done) => {
+    const authenticateUser = async (email, password, done) => {
 
         //19:10
         //make sure email and p/w are correct
@@ -49,7 +49,7 @@ async function initialize(passport, getUserByEmail) {
             
         } catch(error) {
             //error with the application
-            done(error)
+            done(error);
         }
     }
 
@@ -58,7 +58,7 @@ async function initialize(passport, getUserByEmail) {
     //the strategy takes options:
         //1st option: what is our u/n called in our app? (default is u/n; we call it 'email');
         //2nd option: what is our p/w called? (by default, it's p/w; we are using the default);
-    passport.use(new LocalStrategy({ usernameField: 'email'}), authenticateUser)  //no need to specify p/w
+    passport.use(new LocalStrategy({ usernameField: 'email'}, authenticateUser)); //no need to specify p/w
     //2nd variable in use is a function to authenticate user that we must create
 
     //18:45
