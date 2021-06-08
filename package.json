@@ -4,7 +4,7 @@
   "description": " this is a YouTube demo on creating a login page",
   "main": "index.js",
   "scripts": {
-    "devStart": "nodemon server-06.js"
+    "devStart": "nodemon server-08.js"
   },
   "repository": {
     "type": "git",
@@ -27,6 +27,7 @@
     "express-flash": "^0.0.2",
     "express-session": "^1.17.2",
     "express-sessions": "^1.0.1",
+    "method-override": "^3.0.0",
     "passport": "^0.4.1",
     "passport-local": "^1.0.0"
   },

@@ -151,4 +151,27 @@ __*my stretch goals may be executed in separate projects*__
 - create a separate file to keep the server file manageable
     + CLI | touch passport-config.js
 
+#### @28:00
+- app registration is functional with server-06.js
+- messages (wrong info) are displayed on the login page, but
+- correct user entries do not redirect user to the main page
+    + Kyle (teacher) is getting an error that I am not
+    + @28:00 go to the "server-07.js" file
+
+#### @29:15
+- registration and login sequence bring you to homepage
+    + welcome page still displays generic name (corrected)
+    + problem is that we can GO to index page w/ no user
+        * the "/" route should not be accessible w/ no user
+
+#### @30:05
+- protect the routes for when a user is not logged in
+    + @28:00 go to the "server-08.js" file
+
+- when a user does not exist, they are redirected to login
+- when a registered user goes to login, they are sent home
+
+#### @33:30
+- user needs a way to log out
+
 https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet

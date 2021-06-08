@@ -14,7 +14,7 @@ const bcrypt = require('bcrypt');
 
 //26:50
 //need to add async in front of finitialize function
-function initialize (passport, getUserByEmail) {
+function initialize (passport, getUserByEmail, getUserById) {
     //initialize our passport...which will be passed to this f(x)
     //can do all of our configuration of passport inside this file
 
@@ -25,7 +25,7 @@ function initialize (passport, getUserByEmail) {
 
         //19:10
         //make sure email and p/w are correct
-        const user = getUserByEmail(email)  //function will be created
+        const user = getUserByEmail(email)  //function will be created; returns user
         if (user == null) {
             //if no user is found
             return done(null, false, { message: 'user not found'});
@@ -63,9 +63,23 @@ function initialize (passport, getUserByEmail) {
 
     //18:45
     //set up passport for de/serializing our user to store in-session
-    passport.serializeUser((user, done) => { });
 
-    passport.deserializeUser((id, done) => { });
+    //28:00
+    //with registration working, address Kyle's error with this step
+    passport.serializeUser((user, done) => done(null, user.id));
+        //to serialize user, do user.id to get user ID and save into session
+        //pass it to the done() function: null error; user.id is serialized version of user
+
+    //this is literally the inverse of the code above
+    passport.deserializeUser((id, done) => { 
+        //want to get the user by the ID being passed in
+        //make sure this result is being returned
+        return done(null, getUserById(id));
+        
+        //28:45
+        //getUserById needs to be passed in to be used here
+        //goto function initialize to pass it in...go to server to define it
+    });    
 }
 
 //22:00
